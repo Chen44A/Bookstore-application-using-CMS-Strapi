@@ -1,0 +1,471 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+    width: 100%;
+    font-family: "Ubuntu Sans", sans-serif;
+}
+/* darkmode setting */
+body.darkmode  {
+    background: #000000;
+    color: #ffffff;
+}
+.darkmode button {
+    color: #ffffff;
+}
+.darkmode .rateBtn {
+    color: #ffffff;
+    border: 1px solid rgb(255, 255, 255);
+}
+.darkmode #readListBtn, .darkmode #reviweBtn {
+    border-bottom: 1px solid #ffffff;
+}
+.darkmode .readList_div, .darkmode .review_div {
+    border: 1px solid #ffffff;
+}
+.darkmode .favorite_book_info {
+    border-bottom: 1px solid #ffffff;
+}
+.darkmode .favorite_Btn {
+    border: 1px solid #ffffff;
+}
+
+/* lightmode setting */
+body.lightmode {
+    background: #ffffff;
+}
+
+/* violet theme setting */
+.violet header{
+    background: #F0E3FD;
+}
+.violet h3 {
+    color: #BC8DFA;
+}
+.violet button {
+    background: #BC8DFA;
+    border: none !important;
+    color: #ffffff ;
+}
+.violet .favoriteBtn {
+    background: none;
+    color: #000000;
+}
+.violet .img_container {
+    background: #F0E3FD;
+}
+.violet #readListBtn, .violet #reviweBtn {
+    color: #000000;
+    border-bottom: 1px solid #000000 !important;
+}
+/*------ style for header ------*/
+
+header {
+    background: #E6E2E2;
+    width: 100%;
+    height: 66px;
+    padding: 0 32px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo{
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #000000;
+}
+
+.navigation {
+    display: flex;
+    gap: 8px;
+}
+
+#loginBtn, #username,#userAccount, #signOutBtn{
+    width: fit-content;
+    height: 35px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding:0 8px;
+    margin: 0 4px;
+    border: 1px solid black;
+    border-radius: 0;
+    cursor: pointer;
+    color: #000000;
+}
+
+#username {
+    border: none;
+    background: none;
+}
+
+i {
+    padding: 0 4px;
+    font-weight: 600;
+}
+/* style for inlog overlay */
+.overlay-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* 充满整个视口 */
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色背景 */
+    z-index: 998; /* 比 overlay 层次低，确保其在其上方 */
+  }
+
+.main-inloggning{
+    position: fixed;
+    /* 以下三行让页面居中 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    min-height: 364px;
+    background-color:white;
+    z-index: 999; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeBtn {
+    position: fixed;
+    top: 20px; 
+    right: 40px;
+    background-color: rgba(193, 193, 193, 0.7);
+    border: none; 
+    cursor: pointer; 
+    padding: 0; 
+    z-index: 999; 
+    cursor: pointer;
+}
+
+.closeBtn i {
+    font-size: 20px; 
+    color: #ffffff;
+}
+
+.login_title {
+    display: flex;
+}
+.inlog_container,.register_container {
+    padding: 15% 0;
+}
+#login,#newAccount {
+    color: #000000;
+    width: 250px;
+    height: 50px;
+    border: none;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-size: 1rem;
+    background: #ffffff;
+    cursor: pointer;
+}
+#newAccount {
+    background: #E6E2E2;
+}
+
+#usernameInput,#passwordInput,#usernameCreate,#emailCreate,#passwordCreate {
+    width: 400px;
+    height: 60px;
+    padding-left: 16px;
+    font-size: 1rem;
+    font-family: "Ubuntu Sans", sans-serif;
+    margin-bottom: 16px;
+}
+
+#signinBtn,#registerBtn, #review_submitBtn{
+    width: fit-content;
+    min-width: 146px;
+    height:50px;
+    background: #ED932B;
+    padding: 0 16px;
+    border: none;
+    color: #ffffff;
+    font-weight:300;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-size: 1rem;
+    margin-top: 32px;
+    cursor: pointer;
+}
+
+/*------ style for review overlay ------*/
+.ratingFor {
+  color: #000000;
+}
+
+#bookTitle {
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-top: 0;
+    color: #000000;
+}
+
+.radioBtns input[type="radio"] {
+    margin-left: 10px; 
+}
+
+label {
+    color: #000000;
+}
+
+#review_submitBtn {
+    margin-top: 64px;
+}
+
+/*------ style for index-main ------*/
+.index_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2, h3 {
+    font-size: 1.7rem;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    margin: 3.5rem;
+}
+
+
+.ad_image {
+    width: 100%;
+    height: auto;
+}
+
+h3 {
+    font-style: italic;
+}
+
+.text {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 100px;
+}
+
+#book_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0 160px;
+    margin-bottom: 150px;
+}
+
+.book_info {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.img_container {
+    width: 220px;
+    height: 220px;
+    background: #E6E2E2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book_img {
+    height:191px ;
+}
+
+.point {
+    font-size: 0.75rem; ;
+}
+
+.point i {
+    color: #FFD600;
+}
+
+.book_wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-height: 80px
+}
+
+#averageRating, .rating {
+    font-weight: 800;
+}
+
+.author, .book_detail{
+    font-size: 0.75rem;
+    margin: 4px;
+}
+
+.favoriteBtn {
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+h4 {
+    font-size: 0.9rem;
+}
+
+.rateBtn {
+    width: 100%;
+    height: 48px;
+    background: none;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.rateBtn:hover {
+    background: #e9e9e9;
+}
+
+/*------ style for userHome-main ------*/
+.userHome_main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.userHome_main h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 100px 0;
+}
+
+.profile_wrapper {
+    display: flex;
+    justify-content: center;
+
+}
+
+#readListBtn, #reviweBtn {
+    font-weight: 400;
+    width: 256px;
+    height: 34px;
+    background: none;
+    border: none;
+    border-bottom:1px solid black ;
+    text-align: left;
+    padding-left: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#readListBtn {
+    font-weight: 800;
+}
+
+.button_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#favorite_sort, #review_sort {
+    float:right;
+    margin-top: -40px;
+}
+
+.readList_div, .review_div {
+    width: fit-content;
+    min-width: 750px;
+    min-height: 774px;
+    border: 1px solid black;
+    margin-left: 128px;
+    margin-bottom: 150px;
+    padding: 8px;
+}
+
+.favorite_book_info {
+    width: fit-content;
+    min-width: 700px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 16px;
+    padding: 8px 16px;
+    border-bottom: 1px solid black;
+}
+
+.favorite_img_container {
+    width: 150px;
+    height: 150px;
+    background: #E6E2E2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorite_book_img {
+    height:122px ;
+}
+
+.favorite_book_title {
+    font-size: 1rem;
+}
+
+.book_wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-height: 80px
+}
+
+.favorite_author, .favorite_book_detail{
+    font-size: 0.75rem;
+    margin: 4px;
+}
+
+.favorite_Btn {
+    font-size: 0.75rem;
+    background: none;
+    border: 1px solid black;
+    padding: 12px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.favorite_Btn i:hover {
+    color: #E6E2E2;
+}
+/*------ style for footer ------*/
+
+footer {
+    background-color: #575757;
+    color: white;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p {
+    font-size: 0.75rem;
+}

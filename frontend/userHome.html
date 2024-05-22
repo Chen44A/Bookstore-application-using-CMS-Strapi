@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a2d649a589.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
+      integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="userHome.js" defer></script>
+    <script src="theme.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"> <p class="logo">BookSocre</p></a>
+      <nav class="navigation">
+        <div class="inlogged">
+          <button id="username">
+            <i class="fa-solid fa-user"></i
+            ><span id="displayUsername">Username</span>
+          </button>
+          <a href="userHome.html"
+            ><button id="userAccount">
+              <i class="fa-solid fa-house-user"></i> Your account
+            </button>
+          </a>
+          <button id="signOutBtn">
+            <i class="fa-solid fa-door-open"></i>Sing out
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="userHome_main">
+      <a href="userHome.html"><h1>My profile</h1></a>
+      <div class="profile_wrapper">
+        <div class="button_wrapper">
+          <button id="readListBtn">My read list</button>
+          <button id="reviweBtn">My book review</button>
+        </div>
+        <div class="readList_div">
+          <select name="" id="favorite_sort">
+            <option value="defult">Sort by defult</option>
+            <option value="author">Sort by author</option>
+            <option value="title">Sort by title</option>
+          </select>
+          <div id="list_container">You haven't add any book yet!</div>
+        </div>
+        <div class="review_div" style="display: none">
+          <select name="" id="review_sort">
+            <option value="defult">Sort by defult</option>
+            <option value="author">Sort by author</option>
+            <option value="title">Sort by title</option>
+            <option value="point">Sort by point</option>
+          </select>
+          <div id="review_container">You haven't review any book yet!</div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        <i class="fa-solid fa-copyright"></i> 2000-2024 Copyright by Shishi Chen
+      </p>
+    </footer>
+  </body>
+</html>
